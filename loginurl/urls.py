@@ -10,7 +10,7 @@ urlpatterns = [
         name='loginurl-login'), 
     url(r'^$', RedirectView.as_view(
         permanent=True,
-        url=settings.LOGIN_URL)
+        url=settings.LOGIN_URL),
         name='loginurl-index'
        ),
 ]
