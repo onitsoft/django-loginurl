@@ -53,7 +53,7 @@ Configuration
    If the configuration is put inside the project's ``urls.py``, the log in
    URL will look like the following::
 
-       http://example.com/loginurl/a-secret-key
+       http://example.com/loginurl/login/a-secret-key
 
 
 Scheduled Task
@@ -83,7 +83,7 @@ property called ``key`` that contains a unique key for the log in URL.
     import loginurl.utils
 
     def create_login_url(user):
-        key = loginurl.utils.create(user)
+        key = utils.create(user)
         url = 'http://example.com/loginurl/%s' % key.key
 
         return url
