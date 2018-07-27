@@ -12,7 +12,7 @@ class Key(models.Model):
     """
     A simple key store.
     """
-    user = models.ForeignKey(User, on_delete=CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     key = models.CharField(max_length=40, unique=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     usage_left = models.IntegerField(null=True, blank=True, default=1)
