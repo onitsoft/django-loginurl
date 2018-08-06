@@ -39,7 +39,7 @@ def login(request, key):
     # Validate the key through the standard Django's authentication mechanism.
     # It also means that the authentication backend of this django-loginurl
     # application has to be added to the authentication backends configuration.
-    user = auth.authenticate(key=key)
+    user = auth.authenticate(request, key=key)
     if user is None:
         url = settings.LOGIN_URL
         if next is not None:
